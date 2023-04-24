@@ -43,20 +43,21 @@ public class Drivetrain extends SubsystemBase {
     drivetrain.setMaxOutput(0.95);
   }
 
-  /**
-   * Drive the robot! Uses more modern X/Y-axes to move and turn seperately.
-   * @param xSpeed
-   * @param rotation
+   /**
+   * Drive the robot! Uses traditional two Y-axes to move each side.
+   * @param leftSpeed - The speed at which the left side motors should be.
+   * @param rightSpeed - The speed at which the right side motors should be.
    */
   public void tankDrive(double leftSpeed, double rightSpeed) {
     drivetrain.tankDrive(leftSpeed, rightSpeed);
   }
 
-  /**
-   * Drive the robot! Uses fed voltage inputs to move each side.
-   * @param leftVoltage - The voltage at which the left side motors should be.
-   * @param rightVoltage - The voltage at which the right side motors should be.
+   /**
+   * Drive the robot! Uses more modern X/Y-axes to move and turn seperately.
+   * @param xSpeed
+   * @param rotation
    */
+
   public void arcadeDrive(double xSpeed, double rotation) {
     drivetrain.arcadeDrive(xSpeed, rotation);
   }
